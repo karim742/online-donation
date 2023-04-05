@@ -1,0 +1,35 @@
+@import url('https://fonts.maateen.me/bangla/font.css');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Bangla', sans-serif !important;
+
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+body {
+  background-image: url(./Assets/image/webbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  backdrop-filter: blur(1rem);
+}
+
+input {
+  box-shadow: none !important;
+}
+
+.formwrap {
+  background-color: #ffffff52;
+}
