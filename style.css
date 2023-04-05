@@ -24,6 +24,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   backdrop-filter: blur(1rem);
+  overflow: hidden;
 }
 
 input {
@@ -32,4 +33,15 @@ input {
 
 .formwrap {
   background-color: #ffffff52;
+}
+
+.loaderWrap {
+  width: 100vw !important;
+  height: 100vh !important;
+  background: #00000036;
+  color: white;
+  font-size: 3rem;
+  display: grid;
+  place-content: center;
+  align-items: center;
 }

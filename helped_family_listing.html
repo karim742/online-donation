@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
+  <div class="loaderWrap">
+    <div class="spinner-border"></div>
+  </div>
+
   <header>
     <div class="container">
       <div class="brand d-flex justify-content-center align-content-center pt-3">
@@ -49,5 +54,19 @@
       </nav>
     </div>
   </section>
+
+  <script>
+    const loader = document.querySelector('.loaderWrap');
+    const spin = document.querySelector('.loader>div');
+    const body = document.querySelector('body');
+
+    window.addEventListener('load',function(){
+      loader.style.display = 'none';
+      body.style.overflow = 'initial';
+      spin.classList.remove('spinner-border');
+    })
+    
+  </script>
+
 </body>
 </html>
