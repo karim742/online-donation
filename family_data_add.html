@@ -43,10 +43,10 @@
                 <a class="btn btn-warning fs-4" href="./get_help.html">সাহায্য পাবে</a>
               </li>
               <li class="nav-item me-2 mb-2">
-                <a class="btn btn-info fs-4" href="./helped_family_listing.html">সাহায্য প্রার্থীদের তালিকাভুক্ত করুন</a>
+                <a class="btn btn-info fs-4" href="./helped_family_listing.html">সাহায্য প্রাপ্তদের তালিকাভুক্ত করুন</a>
               </li>
               <li class="nav-item me-2 mb-2">
-                <a class="btn btn-primary fs-4" href="./list_helped_people.html">সাহায্য প্রার্থীদের তালিকা দেখুন</a>
+                <a class="btn btn-primary fs-4" href="./list_helped_people.html">সাহায্য প্রাপ্তদের সকল তালিকা দেখুন</a>
               </li>
             </ul>
             <div class="emergency mb-2">
@@ -73,34 +73,24 @@
             <div id="fullnamemsg" class="form-text">.........</div>
           </div>
           <div class="mb-3">
+            <label for="age" class="form-label fs-4">বয়সঃ</label>
+            <input type="number" class="form-control" id="age" name="data[Age]" placeholder="বয়স" required>
+            <div id="agemsg" class="form-text">.........</div>
+          </div>
+          <div class="mb-3">
+            <label for="mobile" class="form-label fs-4">মোবাইল নাম্বারঃ</label>
+            <input type="number" class="form-control" id="mobile" name="data[Mobile Number]" placeholder="মোবাইল নাম্বার" required>
+            <div id="mobilemsg" class="form-text">.........</div>
+          </div>
+          <div class="mb-3">
             <label for="fathername" class="form-label fs-4">পিতার নামঃ</label>
             <input type="text" class="form-control" id="fathername" name="data[Father Name]" placeholder="পিতার নাম" required>
             <div id="fathernamemsg" class="form-text">.........</div>
           </div>
           <div class="mb-3">
-            <label for="fatherage" class="form-label fs-4">পিতার বয়সঃ</label>
-            <input type="number" class="form-control" id="fatherage" name="data[Father Age]" placeholder="পিতার বয়স" required>
-            <div id="fatheragemsg" class="form-text">.........</div>
-          </div>
-          <div class="mb-3">
-            <label for="fatheroccupation" class="form-label fs-4">পিতার পেশাঃ</label>
-            <input type="text" class="form-control" id="fatheroccupation" name="data[Father Occupation]" placeholder="পিতার পেশা" required>
-            <div id="fatheroccupationmsg" class="form-text">.........</div>
-          </div>
-          <div class="mb-3">
             <label for="mothername" class="form-label fs-4">মাতার নামঃ</label>
             <input type="text" class="form-control" id="mothername" name="data[Mother Name]" placeholder="মাতার নাম" required>
             <div id="mothernamemsg" class="form-text">.........</div>
-          </div>
-          <div class="mb-3">
-            <label for="motherage" class="form-label fs-4">মাতার বয়সঃ</label>
-            <input type="number" class="form-control" id="motherage" name="data[Mother Age]" placeholder="মাতার বয়স" required>
-            <div id="motheragemsg" class="form-text">.........</div>
-          </div>
-          <div class="mb-3">
-            <label for="motheroccupation" class="form-label fs-4">মাতার পেশাঃ</label>
-            <input type="text" class="form-control" id="motheroccupation" name="data[Mother Occupation]" placeholder="মাতার পেশা" required>
-            <div id="motheroccupationmsg" class="form-text">.........</div>
           </div>
           <div class="mb-3">
             <label for="villagename" class="form-label fs-4">গ্রামের নামঃ</label>
@@ -141,6 +131,11 @@
             <label for="familychlildrenmember" class="form-label fs-4">পরিবারের শিশু সদস্যঃ</label>
             <input type="number" class="form-control" id="familychlildrenmember" name="data[Family Children Member]" placeholder="পরিবারের শিশু সদস্য">
             <div id="familychlildrenmembermsg" class="form-text">.........</div>
+          </div>
+          <div class="mb-3">
+            <label for="illness" class="form-label fs-4">পরিবারের কেউ কোনো বিশেষ রোগে আক্রান্ত কিনা? তা সম্পর্কে লিখুন।</label>
+            <textarea class="form-control" rows="5" id="illness" name="data[Illness]" placeholder="দুরা রোগ্য"></textarea>
+            <div id="illnessmsg" class="form-text">.........</div>
           </div>
           <div class="mb-3">
             <label for="googlelocation" class="form-label fs-4">গুগুল লোকেশনঃ</label>
