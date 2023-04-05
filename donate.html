@@ -49,11 +49,85 @@
                 <a class="btn btn-primary fs-4" href="./list_helped_people.html">সাহায্য প্রার্থীদের তালিকা দেখুন</a>
               </li>
             </ul>
+            <div class="emergency mb-2">
+              <div><a href="tel:018232223" class="btn btn-danger fs-4">জরুরি প্রয়োজনে কল করুন</a></div>
+            </div>
           </div>
         </div>
       </nav>
     </div>
   </section>
+
+  <section>
+    <div class="container p-3">
+      <form action="https://sheetdb.io/api/v1/r9idtakig9x8w" method="post" id="sheetdb-form">
+        <div class="formwrap p-4 rounded">
+          <div class="mb-3">
+            <label for="date" class="form-label fs-4">তারিখঃ</label>
+            <input type="date" class="form-control" id="date" name="data[Date]" placeholder="তারিখ" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="fullname" class="form-label fs-4">সম্পূর্ন নামঃ</label>
+            <input type="text" class="form-control" id="fullname" name="data[Full Name]" placeholder="সম্পূর্ন নাম">
+            
+          </div>
+          <div class="mb-3">
+            <label for="amount" class="form-label fs-4">টাকার পরিমানঃ</label>
+            <input type="number" class="form-control" id="amount" name="data[Money Amount]" placeholder="টাকার পরিমান" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="mobile" class="form-label fs-4">মোবাইল নাম্বারঃ</label>
+            <input type="number" class="form-control" id="mobile" name="data[Mobile Number]" placeholder="মোবাইল নাম্বার">
+            
+          </div>
+          <div class="mb-3">
+            <label for="method" class="form-label fs-4">টাকা পাঠানোর মাধ্যমঃ</label>
+            <input type="text" class="form-control" id="method" name="data[Method]" placeholder="টাকা পাঠানোর মাধ্যম" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="lastdigit" class="form-label fs-4">যে নাম্বার থেকে টাকা পাঠানো হয়েছে তাই শেষের তিন ডিজিটঃ</label>
+            <input type="number" class="form-control" id="lastdigit" name="data[Last Digit]" placeholder="যে নাম্বার থেকে টাকা পাঠানো হয়েছে তাই শেষের তিন ডিজিট" required>
+            
+          </div>
+          
+          <div class="mb-3">
+            <div id="addmessage" class="form-text fs-2"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary fs-4">দান করুন</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+
+
+  <script>
+      const msg = document.getElementById('addmessage');
+      const sheetLink = document.getElementById('sheetLink');
+
+      let form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            
+            msg.innerHTML = 'আপনার দানকৃত অর্থ আমাদের ডাটাবেজ এ সফলভাবে সংরক্ষন হয়েছে। আজকের মধ্যে আপনাকে কল করে এটি নিশ্চিত করা হবে। ধন্যবাদ ❤️'
+
+            form.reset();
+
+          });
+        });
+  </script>
 
   <script>
     const loader = document.querySelector('.loaderWrap');
@@ -67,6 +141,6 @@
     })
     
   </script>
-  
+
 </body>
 </html>
