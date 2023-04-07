@@ -26,7 +26,7 @@ body {
   overflow: hidden;
 }
 
-input,textarea {
+input,textarea,select {
   box-shadow: none !important;
 }
 
@@ -43,4 +43,16 @@ input,textarea {
   display: grid;
   place-content: center;
   align-items: center;
+}
+
+.subTitle h3{
+  color: white;
+  background: #ff6347b8;
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable{
+  background: #ffffff8c;
+  padding: 2rem;
 }

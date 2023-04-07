@@ -93,12 +93,31 @@
           </div>
           <div class="mb-3">
             <label for="villagename" class="form-label fs-4">৭। গ্রামের নামঃ</label>
-            <input type="text" class="form-control" id="villagename" name="data[Village Name]" placeholder="গ্রামের নাম" required>
+            <!-- <input type="text" class="form-control" id="villagename" name="data[Village Name]" placeholder="গ্রামের নাম" required> -->
+            <select class="form-select" name="data[Village Name]" id="villagename" required>
+              <option value="">গ্রামের নাম নির্বাচন করুন</option>
+              <option value="মুগারচর">মুগারচর</option>
+              <option value="রাধানগর">রাধানগর</option>  
+            </select>
             <div id="villagenamemsg" class="form-text">.........</div>
           </div>
           <div class="mb-3">
             <label for="homename" class="form-label fs-4">৮। বাড়ীর নামঃ</label>
-            <input type="text" class="form-control" id="homename" name="data[Home Name]" placeholder="বাড়ীর নাম" required>
+            <!-- <input type="text" class="form-control" id="homename" name="data[Home Name]" placeholder="বাড়ীর নাম" required> -->
+            <select class="form-select" name="data[Home Name]" id="homename" required>
+              <option value="">বাড়ীর নাম নির্বাচন করুন</option>
+              <option value="চেয়ারম্যান বাড়ি ">চেয়ারম্যান বাড়ি </option>
+              <option value=" লন্ডনী বাড়ি"> লন্ডনী বাড়ি</option>
+              <option value="হক সাব বাড়ি">হক সাব বাড়ি</option>
+              <option value="বাঙ্গাল বাড়ি">বাঙ্গাল বাড়ি</option>
+              <option value="পাগলা বাড়ি">পাগলা বাড়ি</option>
+              <option value="আবিদ আলি সরকার বাড়ি">আবিদ আলি সরকার বাড়ি</option>
+              <option value="বড় বাড়ি">বড় বাড়ি</option>
+              <option value="মৌলবি বাড়ি">মৌলবি বাড়ি</option>
+              <option value="মোল্লা বাড়ি">মোল্লা বাড়ি</option>
+              <option value="ছাড়া বাড়ি">ছাড়া বাড়ি</option>
+              <option value="কাজি বাড়ি">কাজি বাড়ি</option>
+            </select>
             <div id="homenamemsg" class="form-text">.........</div>
           </div>
           <div class="mb-3">
@@ -193,18 +212,27 @@
         });
   </script>
 
-<script>
-  const loader = document.querySelector('.loaderWrap');
-  const spin = document.querySelector('.loaderWrap>div');
-  const body = document.querySelector('body');
+  <script>
+    const loader = document.querySelector('.loaderWrap');
+    const spin = document.querySelector('.loaderWrap>div');
+    const body = document.querySelector('body');
 
-  window.addEventListener('load',function(){
-    loader.style.display = 'none';
-    body.style.overflow = 'initial';
-    spin.classList.remove('spinner-border');
-  })
-  
-</script>
+    window.addEventListener('load',function(){
+      loader.style.display = 'none';
+      body.style.overflow = 'initial';
+      spin.classList.remove('spinner-border');
+    })
+    
+  </script>
+
+  <!-- <script>
+    const numberInput = document.getElementById('mobile');
+    // const msg = document.getElementById('addmessage');
+
+    numberInput.addEventListener('focus',function(){
+      msg.innerHTML = '';
+    });
+  </script> -->
 
 </body>
 </html>

@@ -66,6 +66,60 @@
       </div>
     </div>
   </section>
+  
+  <section>
+    <div class="container p-3">
+      <form action="https://sheetdb.io/api/v1/r9idtakig9x8w" method="post" id="sheetdb-form">
+        <div class="formwrap p-4 rounded">
+          <div class="mb-3">
+            <label for="date" class="form-label fs-4">তারিখঃ</label>
+            <input type="date" class="form-control" id="date" name="data[Date]" placeholder="তারিখ" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="fullname" class="form-label fs-4">সম্পূর্ন নামঃ</label>
+            <input type="text" class="form-control" id="fullname" name="data[Full Name]" placeholder="সম্পূর্ন নাম">
+            
+          </div>
+          <div class="mb-3">
+            <label for="amount" class="form-label fs-4">টাকার পরিমানঃ</label>
+            <input type="number" class="form-control" id="amount" name="data[Money Amount]" placeholder="টাকার পরিমান" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="mobile" class="form-label fs-4">মোবাইল নাম্বারঃ</label>
+            <input type="number" class="form-control" id="mobile" name="data[Mobile Number]" placeholder="মোবাইল নাম্বার">
+            
+          </div>
+          <div class="mb-3">
+            <label for="method" class="form-label fs-4">টাকা পাঠানোর মাধ্যমঃ</label>
+            <!-- <input type="text" class="form-control" id="method" name="data[Method]" required> -->
+            <select class="form-select" name="data[Method]" id="method" required>
+              <option value="">টাকা পাঠানোর মাধ্যম নির্বাচন করুন</option>
+              <option value="বিকাশ">বিকাশ</option>
+              <option value="নগদ">নগদ</option>
+              <option value="রকেট">রকেট</option>
+              <option value="শিউর ক্যাশ">শিউর ক্যাশ</option>
+              <option value="ডাচ বাংলা ব্যাংক লিমিটেড">ডাচ বাংলা ব্যাংক লিমিটেড</option>
+            </select>
+            
+          </div>
+          <div class="mb-3">
+            <label for="lastdigit" class="form-label fs-4">যে নাম্বার থেকে টাকা পাঠানো হয়েছে তাই শেষের তিন ডিজিটঃ</label>
+            <input type="number" class="form-control" id="lastdigit" name="data[Last Digit]" placeholder="যে নাম্বার থেকে টাকা পাঠানো হয়েছে তাই শেষের তিন ডিজিট" required>
+            
+          </div>
+          
+          <div class="mb-3">
+            <div id="addmessage" class="form-text fs-2"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary fs-4">দান করুন</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
 
 
 

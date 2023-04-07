@@ -60,12 +60,86 @@
   <section>
     <div class="container">
       <div class="donatetitle mt-3">
-        <h1>আপনারা আমাদের কে দুই ভাবে টাকা প্রদান করতে পারেন।</h1>
+        <h1 class="fw-bold">আপনারা আমাদের কে দুই ভাবে টাকা প্রদান করতে পারেন।</h1>
         <h3>১। অনলাইন এর মাধ্যমে প্রদান করতে এখানে <a href="./online_donate.html">ক্লিক করুন</a></h3>
         <h3>২। আমাদের প্রতিনিধির প্রদান করতে এখানে <a href="./offline_donate.html">ক্লিক করুন</a></h3>
       </div>
     </div>
   </section>
+
+  <section>
+    <div class="container">
+      <div class="ourProtinidi">
+        <h2 class="fw-bold"><span style="font-size: 4rem;">আ</span>মাদের প্রতিনিধির তালিকা ও মোবাইল নাম্বার অনুগ্রহ করে যোগাযোগ করুন</h2>
+      </div>
+      <div class="ourProtinidiTable" style="background: #ffffffed;">
+        <div class="table-responsive">          
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>প্রতিনিধির নাম</th>
+                <th>মোবাইল নাম্বার</th>
+                <th>গ্রাম</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>শাকিল</td>
+                <td><a href="tel:0150000000">০১৫০০০০০০০</a></td>
+                <td>মুগারচর</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container p-3">
+      <form action="https://sheetdb.io/api/v1/r9idtakig9x8w" method="post" id="sheetdb-form">
+        <div class="formwrap p-4 rounded">
+          <div class="mb-3">
+            <label for="date" class="form-label fs-4">তারিখঃ</label>
+            <input type="date" class="form-control" id="date" name="data[Date]" placeholder="তারিখ" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="protinidiname" class="form-label fs-4">প্রতিনিধির নামঃ</label>
+            <input type="text" class="form-control" id="protinidiname" name="data[Protinidi Name]" placeholder="প্রতিনিধির নাম">
+            
+          </div>
+          <div class="mb-3">
+            <label for="donarname" class="form-label fs-4">দানকারী ব্যাক্তির নামঃ</label>
+            <input type="text" class="form-control" id="donarname" name="data[Donar Name]" placeholder="দানকারী ব্যাক্তির নাম">
+            
+          </div>
+          <div class="mb-3">
+            <label for="amount" class="form-label fs-4">টাকার পরিমানঃ</label>
+            <input type="number" class="form-control" id="amount" name="data[Money Amount]" placeholder="টাকার পরিমান" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="donarmobile" class="form-label fs-4">দানকারী ব্যাক্তির মোবাইল নাম্বারঃ</label>
+            <input type="number" class="form-control" id="donarmobile" name="data[Donar Mobile Number]" placeholder="দানকারী ব্যাক্তির মোবাইল নাম্বার">
+            
+          </div>
+          <div class="mb-3">
+            <label for="collectplace" class="form-label fs-4">টাকা সংগ্রহের স্থানঃ</label>
+            <input type="text" class="form-control" id="collectplace" name="data[Collect Place]" placeholder="টাকা সংগ্রহের স্থান" required>
+            
+          </div>
+          
+          <div class="mb-3">
+            <div id="addmessage" class="form-text fs-2"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary fs-4">যোগ করুন</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
 
 
 
@@ -84,7 +158,7 @@
           ).then((html) => {
             // you can put any JS code here
             
-            msg.innerHTML = 'আপনার দানকৃত অর্থ আমাদের ডাটাবেজ এ সফলভাবে সংরক্ষন হয়েছে। আজকের মধ্যে আপনাকে কল করে এটি নিশ্চিত করা হবে। ধন্যবাদ ❤️'
+            msg.innerHTML = 'আপনার দানকৃত অর্থ আমাদের ডাটাবেজ এ সফলভাবে সংরক্ষন হয়েছে। ধন্যবাদ ❤️'
 
             form.reset();
 
