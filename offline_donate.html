@@ -19,7 +19,7 @@
   <header>
     <div class="container">
       <div class="brand d-flex justify-content-center align-content-center pt-3">
-        <h1 class="text-center btn btn-danger fs-1">দান সম্পর্কে আমাদের জানান</h1>
+        <h1 class="text-center btn btn-danger fs-1">অফলাইনে দান সম্পর্কে আমাদের জানান</h1>
       </div>
     </div>
   </header>
@@ -35,6 +35,9 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item me-2 mb-2">
                 <a class="btn btn-success fs-4" href="./family_data_add.html">পরিবারের তথ্য যোগ করুন</a>
+              </li>
+              <li class="nav-item me-2 mb-2">
+                <a class="btn btn-primary fs-4" href="./representative.html">প্রতিনিধি হতে চান?</a>
               </li>
               <li class="nav-item me-2 mb-2">
                 <a class="btn btn-danger fs-4" href="./donate.html">দান সম্পর্কে আমাদের জানান</a>
@@ -101,32 +104,43 @@
         <div class="formwrap p-4 rounded">
           <div class="mb-3">
             <label for="date" class="form-label fs-4">তারিখঃ</label>
-            <input type="date" class="form-control" id="date" name="data[Date]" placeholder="তারিখ" required>
+            <input type="date" class="form-control" id="date" name="data[date]" placeholder="তারিখ" required>
             
           </div>
           <div class="mb-3">
             <label for="protinidiname" class="form-label fs-4">প্রতিনিধির নামঃ</label>
-            <input type="text" class="form-control" id="protinidiname" name="data[Protinidi Name]" placeholder="প্রতিনিধির নাম">
+            <input type="text" class="form-control" id="protinidiname" name="data[protinidiname]" placeholder="প্রতিনিধির নাম">
             
           </div>
           <div class="mb-3">
             <label for="donarname" class="form-label fs-4">দানকারী ব্যাক্তির নামঃ</label>
-            <input type="text" class="form-control" id="donarname" name="data[Donar Name]" placeholder="দানকারী ব্যাক্তির নাম">
+            <input type="text" class="form-control" id="donarname" name="data[donarname]" placeholder="দানকারী ব্যাক্তির নাম">
             
           </div>
           <div class="mb-3">
             <label for="amount" class="form-label fs-4">টাকার পরিমানঃ</label>
-            <input type="number" class="form-control" id="amount" name="data[Money Amount]" placeholder="টাকার পরিমান" required>
+            <input type="number" class="form-control" id="amount" name="data[moneyamount]" placeholder="টাকার পরিমান" required>
             
           </div>
           <div class="mb-3">
             <label for="donarmobile" class="form-label fs-4">দানকারী ব্যাক্তির মোবাইল নাম্বারঃ</label>
-            <input type="number" class="form-control" id="donarmobile" name="data[Donar Mobile Number]" placeholder="দানকারী ব্যাক্তির মোবাইল নাম্বার">
+            <input type="number" class="form-control" id="donarmobile" name="data[donarmobilenumber]" placeholder="দানকারী ব্যাক্তির মোবাইল নাম্বার">
             
           </div>
           <div class="mb-3">
             <label for="collectplace" class="form-label fs-4">টাকা সংগ্রহের স্থানঃ</label>
-            <input type="text" class="form-control" id="collectplace" name="data[Collect Place]" placeholder="টাকা সংগ্রহের স্থান" required>
+            <input type="text" class="form-control" id="collectplace" name="data[collectplace]" placeholder="টাকা সংগ্রহের স্থান" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="donateCatagory" class="form-label fs-4">আপনার দানের ধরন নির্বাচন করুনঃ</label>
+            <!-- <input type="text" class="form-control" id="method" name="data[Method]" required> -->
+            <select class="form-select" name="data[donatecatagory]" id="donateCatagory" required>
+              <option value="">আপনার দানের মাধ্যম নির্বাচন করুন</option>
+              <option value="সাধারন দান">সাধারন দান</option>
+              <option value="ফিতরা">ফিতরা</option>
+              <option value="যাকাত">যাকাত</option>
+            </select>
             
           </div>
           

@@ -19,7 +19,7 @@
   <header>
     <div class="container">
       <div class="brand d-flex justify-content-center align-content-center pt-3">
-        <h1 class="text-center btn btn-danger fs-1">দান সম্পর্কে আমাদের জানান</h1>
+        <h1 class="text-center btn btn-danger fs-1">অনলাইনে দান সম্পর্কে আমাদের জানান</h1>
       </div>
     </div>
   </header>
@@ -35,6 +35,9 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item me-2 mb-2">
                 <a class="btn btn-success fs-4" href="./family_data_add.html">পরিবারের তথ্য যোগ করুন</a>
+              </li>
+              <li class="nav-item me-2 mb-2">
+                <a class="btn btn-primary fs-4" href="./representative.html">প্রতিনিধি হতে চান?</a>
               </li>
               <li class="nav-item me-2 mb-2">
                 <a class="btn btn-danger fs-4" href="./donate.html">দান সম্পর্কে আমাদের জানান</a>
@@ -67,14 +70,10 @@
       </div>
       <div class="onlinedonateNumber mt-3">
         <div class="row">
-          <div class="col-4">
-            <div class="onlinedonateNumberWrap d-flex flex-column justify-content-center align-content-center">
+          <div class="col">
+            <div class="onlinedonateNumberWrap d-flex justify-content-center align-content-center">
               <div class="numberQR">
-                <img src="./Assets/image/qrcode_chrome.png" width="120px">
-              </div>
-              <div class="numberDesc text-center">
-                <h2>বিকাশ</h2>
-                <h2>নগদ</h2>
+                <img src="./Assets/image/Masum_Bkash_01968668506.jpg" width="200px">
               </div>
             </div>
           </div>
@@ -89,28 +88,28 @@
         <div class="formwrap p-4 rounded">
           <div class="mb-3">
             <label for="date" class="form-label fs-4">তারিখঃ</label>
-            <input type="date" class="form-control" id="date" name="data[Date]" placeholder="তারিখ" required>
+            <input type="date" class="form-control" id="date" name="data[date]" placeholder="তারিখ" required>
             
           </div>
           <div class="mb-3">
             <label for="fullname" class="form-label fs-4">সম্পূর্ন নামঃ</label>
-            <input type="text" class="form-control" id="fullname" name="data[Full Name]" placeholder="সম্পূর্ন নাম">
+            <input type="text" class="form-control" id="fullname" name="data[fullname]" placeholder="সম্পূর্ন নাম">
             
           </div>
           <div class="mb-3">
             <label for="amount" class="form-label fs-4">টাকার পরিমানঃ</label>
-            <input type="number" class="form-control" id="amount" name="data[Money Amount]" placeholder="টাকার পরিমান" required>
+            <input type="number" class="form-control" id="amount" name="data[moneyamount]" placeholder="টাকার পরিমান" required>
             
           </div>
           <div class="mb-3">
             <label for="mobile" class="form-label fs-4">মোবাইল নাম্বারঃ</label>
-            <input type="number" class="form-control" id="mobile" name="data[Mobile Number]" placeholder="মোবাইল নাম্বার">
+            <input type="number" class="form-control" id="mobile" name="data[mobilenumber]" placeholder="মোবাইল নাম্বার">
             
           </div>
           <div class="mb-3">
             <label for="method" class="form-label fs-4">টাকা পাঠানোর মাধ্যমঃ</label>
             <!-- <input type="text" class="form-control" id="method" name="data[Method]" required> -->
-            <select class="form-select" name="data[Method]" id="method" required>
+            <select class="form-select" name="data[method]" id="method" required>
               <option value="">টাকা পাঠানোর মাধ্যম নির্বাচন করুন</option>
               <option value="বিকাশ">বিকাশ</option>
               <option value="নগদ">নগদ</option>
@@ -122,7 +121,18 @@
           </div>
           <div class="mb-3">
             <label for="lastdigit" class="form-label fs-4">যে নাম্বার থেকে টাকা পাঠানো হয়েছে তাই শেষের তিন ডিজিটঃ</label>
-            <input type="number" class="form-control" id="lastdigit" name="data[Last Digit]" placeholder="যে নাম্বার থেকে টাকা পাঠানো হয়েছে তাই শেষের তিন ডিজিট" required>
+            <input type="number" class="form-control" id="lastdigit" name="data[lastdigit]" placeholder="যে নাম্বার থেকে টাকা পাঠানো হয়েছে তাই শেষের তিন ডিজিট" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="donateCatagory" class="form-label fs-4">আপনার দানের ধরন নির্বাচন করুনঃ</label>
+            <!-- <input type="text" class="form-control" id="method" name="data[Method]" required> -->
+            <select class="form-select" name="data[donatecatagory]" id="donateCatagory" required>
+              <option value="">আপনার দানের মাধ্যম নির্বাচন করুন</option>
+              <option value="সাধারন দান">সাধারন দান</option>
+              <option value="ফিতরা">ফিতরা</option>
+              <option value="যাকাত">যাকাত</option>
+            </select>
             
           </div>
           
