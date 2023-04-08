@@ -60,10 +60,182 @@
     </div>
   </section>
 
+  <section>
+    <div class="container">
+      <div class="representativetitle mt-3">
+        <h1>আমাদের সাথে কাজ করতে ইচ্ছুক হলে, সঠিক তথ্য দিয়ে প্রতিনিধি পদে যুক্ত হন। </h1>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container p-3">
+      <form action="" method="post" id="sheetdb-form">
+        <div class="formwrap p-4 rounded">
+          <div class="mb-3">
+            <label for="date" class="form-label fs-4">তারিখঃ</label>
+            <input type="date" class="form-control" id="date" name="data[date]" placeholder="তারিখ" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="fullname" class="form-label fs-4">সম্পূর্ন নামঃ</label>
+            <input type="text" class="form-control" id="fullname" name="data[fullname]" placeholder="সম্পূর্ন নাম">
+            
+          </div>
+          <div class="mb-3">
+            <label for="age" class="form-label fs-4">বয়সঃ</label>
+            <input type="number" class="form-control" id="age" name="data[age]" placeholder="বয়স" required>
+            
+          </div>
+          <div class="mb-3">
+            <label for="occupation" class="form-label fs-4">পেশাঃ</label>
+            <input type="text" class="form-control" id="occupation" name="data[occupation]" placeholder="পেশা">
+            
+          </div>
+          <div class="mb-3">
+            <label for="villagename" class="form-label fs-4"
+              >গ্রামের নামঃ</label
+            >
+            <!-- <input type="text" class="form-control" id="villagename" name="data[Village Name]" placeholder="গ্রামের নাম" required> -->
+            <select
+              class="form-select"
+              name="data[villagename]"
+              id="villagename"
+              required
+            >
+              <option value="">গ্রামের নাম নির্বাচন করুন</option>
+              <option value="মুগারচর">মুগারচর</option>
+            </select>
+            <div id="villagenamemsg" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="homename" class="form-label fs-4"
+              >বাড়ীর নামঃ</label
+            >
+            <!-- <input type="text" class="form-control" id="homename" name="data[Home Name]" placeholder="বাড়ীর নাম" required> -->
+            <select
+              class="form-select"
+              name="data[homename]"
+              id="homename"
+              required
+            >
+              <option value="">বাড়ীর নাম নির্বাচন করুন</option>
+              <option value="চেয়ারম্যান বাড়ি ">চেয়ারম্যান বাড়ি</option>
+              <option value=" লন্ডনী বাড়ি">লন্ডনী বাড়ি</option>
+              <option value="হক সাব বাড়ি">হক সাব বাড়ি</option>
+              <option value="বাঙ্গাল বাড়ি">বাঙ্গাল বাড়ি</option>
+              <option value="পাগলা বাড়ি">পাগলা বাড়ি</option>
+              <option value="আবিদ আলি সরকার বাড়ি">আবিদ আলি সরকার বাড়ি</option>
+              <option value="বড় বাড়ি">বড় বাড়ি</option>
+              <option value="মৌলবি বাড়ি">মৌলবি বাড়ি</option>
+              <option value="মোল্লা বাড়ি">মোল্লা বাড়ি</option>
+              <option value="ছাড়া বাড়ি">ছাড়া বাড়ি</option>
+              <option value="কাজি বাড়ি">কাজি বাড়ি</option>
+              <option value="কেন্তা ভূঁইয়া বাড়ি">কেন্তা ভূঁইয়া বাড়ি</option>
+              <option value="সুলতান হাজী বাড়ি">সুলতান হাজী বাড়ি</option>
+              <option value="মুরাদ বাড়ি">মুরাদ বাড়ি</option>
+              <option value="হাজী নান্দু মেম্বার বাড়ি">
+                হাজী নান্দু মেম্বার বাড়ি
+              </option>
+              <option value="হাজী বাড়ি">হাজী বাড়ি</option>
+              <option value="সরা বাড়ি">সরা বাড়ি</option>
+              <option value="ভূঁইয়া বাড়ি">ভূঁইয়া বাড়ি</option>
+              <option value="দাদন বাড়ি">দাদন বাড়ি</option>
+            </select>
+            <div id="homenamemsg" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="fathername" class="form-label fs-4">পিতার নামঃ</label>
+            <input type="text" class="form-control" id="fathername" name="data[fathername]" placeholder="পিতার নাম">
+            
+          </div>
+          <div class="mb-3">
+            <label for="monthlyincome" class="form-label fs-4"
+              >পরিবারের আয় (মাসিক)</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="monthlyincome"
+              name="data[monthlyincome]"
+              placeholder="পরিবারের আয় (মাসিক)"
+              required
+            />
+            <div id="monthlyincomemsg" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="familymember" class="form-label fs-4"
+              >পরিবারের সদস্য সংখ্যাঃ</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="familymember"
+              name="data[familymember]"
+              placeholder="পরিবারের সদস্য সংখ্যা"
+              required
+            />
+            <div id="familymembermsg" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="mobile" class="form-label fs-4">মোবাইল নাম্বারঃ</label>
+            <input type="number" class="form-control" id="mobile" name="data[mobilenumber]" placeholder="মোবাইল নাম্বার">
+            
+          </div>
+          <div class="mb-3">
+            <label for="googlelocation" class="form-label fs-4"
+              >গুগুল লোকেশনঃ</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="googlelocation"
+              name="data[googlelocation]"
+              placeholder="গুগুল লোকেশন"
+              required
+            />
+            <div id="googlelocationmsg" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="temporaryaddress" class="form-label fs-4"
+              >অস্থায়ী ঠিকানাঃ</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="temporaryaddress"
+              name="data[temporaryaddress]"
+              placeholder="অস্থায়ী ঠিকানা"
+            />
+            <div id="temporaryaddressmsg" class="form-text"></div>
+          </div>
+          <div class="mb-3">
+            <label for="fbidlink" class="form-label fs-4"
+              >ফেইসবুক প্রোফাইল লিংকঃ</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="fbidlink"
+              name="data[fbidlink]"
+              placeholder="ফেইসবুক প্রোফাইল লিংক"
+            />
+            <div id="fbidlinkmsg" class="form-text"></div>
+          </div>
+          
+          <div class="mb-3">
+            <div id="addmessage" class="form-text fs-2"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary fs-4">তথ্য জমা দিন</button>
+        </div>
+      </form>
+    </div>
+  </section>
 
 
   
-  <script>
+  <!-- <script>
     const msg = document.getElementById('addmessage');
     const sheetLink = document.getElementById('sheetLink');
 
@@ -84,7 +256,7 @@
 
         });
       });
-</script>
+</script> -->
 
 <script>
   const loader = document.querySelector('.loaderWrap');

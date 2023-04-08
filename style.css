@@ -52,7 +52,23 @@ input,textarea,select {
   display: inline-block;
 }
 
-.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable,.onlinedonateNumber{
+.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable,.onlinedonateNumber,.representativetitle{
   background: #ffffff8c;
   padding: 2rem;
+}
+
+.representativetitle:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: red;
+  border-radius: 100%;
+  top: 42px;
+  left: 10px;
+}
+
+.representativetitle {
+  position: relative;
+  padding-left: 3rem;
 }
