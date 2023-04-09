@@ -87,28 +87,14 @@
                 <th>কোড নাম্বার</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
+            <tbody id="tableBody">
+              <!-- <tr>
                 <td>শাকিল</td>
                 <td><a href="tel:0150000000">০১৫০০০০০০০</a></td>
                 <td>মুগারচর</td>
                 <td>ভুইয়া বাড়ী</td>
                 <td>001</td>
-              </tr>
-              <tr>
-                <td>শাকিল</td>
-                <td><a href="tel:0150000000">০১৫০০০০০০০</a></td>
-                <td>মুগারচর</td>
-                <td>ভুইয়া বাড়ী</td>
-                <td>001</td>
-              </tr>
-              <tr>
-                <td>শাকিল</td>
-                <td><a href="tel:0150000000">০১৫০০০০০০০</a></td>
-                <td>মুগারচর</td>
-                <td>ভুইয়া বাড়ী</td>
-                <td>001</td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
@@ -209,6 +195,28 @@
       spin.classList.remove('spinner-border');
     })
     
+  </script>
+
+  <script>
+  const tableBody = document.getElementById('tableBody');
+
+  fetch('https://sheetdb.io/api/v1/bzaen2kox9ids')
+          .then((response) => response.json())
+          .then((data) => {
+            // console.log(data[0]);
+            data.forEach((singleRepre,index) => {
+              if(singleRepre.approval === "TRUE"){
+                tableBody.innerHTML += `<tr>
+                  <td>${singleRepre.fullname}</td>
+                  <td><a href="tel:${singleRepre.mobilenumber}">${singleRepre.mobilenumber}</a></td>
+                  <td>${singleRepre.villagename}</td>
+                  <td>${singleRepre.homename}</td>
+                  <td>00${index+1}</td>
+                </tr>`;
+              }
+            });
+          });
+
   </script>
 
 </body>

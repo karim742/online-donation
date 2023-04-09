@@ -62,13 +62,39 @@
 
   <section>
     <div class="container">
-      <h1 class="text-white">data come form data base api</h1>
+      <h1 class="text-white"></h1>
+      <table id="show">
+        
+      </table>
 
     <div>
       <a class="btn btn-info fs-4" href="./helped_family_listing.html">সাহায্য প্রাপ্তদের তালিকাভুক্ত করুন</a>
     </div>
     </div>
   </section>
+
+
+
+  <script>
+    const show = document.getElementById('show');
+
+    fetch('https://sheetdb.io/api/v1/odxza6403z7of')
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data[0]);
+              show.innerHTML = `<tr>
+          <td>${data[0].date}</td>
+          <td>${data[0].age}</td>
+          <td>${data[0].easeofclothing}</td>
+          <td>${data[0].fathername}</td>
+          <td>${data[0].fullname}</td>
+          <td>${data[0].mobilenumber}</td>
+          <td>${data[0].representativename}</td>
+        </tr>`;
+            });
+
+  </script>
+
 
   <script>
     const loader = document.querySelector('.loaderWrap');
