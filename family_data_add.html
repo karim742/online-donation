@@ -69,7 +69,9 @@
                   >
                 </li>
                 <li class="nav-item me-2 mb-2">
-                  <a class="btn btn-primary fs-4" href="./representative.html">প্রতিনিধি হতে চান?</a>
+                  <a class="btn btn-primary fs-4" href="./representative.html"
+                    >প্রতিনিধি হতে চান?</a
+                  >
                 </li>
                 <li class="nav-item me-2 mb-2">
                   <a class="btn btn-danger fs-4" href="./donate.html"
@@ -116,7 +118,7 @@
                 type="date"
                 class="form-control"
                 id="date"
-                name="data[Date]"
+                name="data[date]"
                 placeholder="তারিখ"
                 required
               />
@@ -130,7 +132,7 @@
                 type="text"
                 class="form-control"
                 id="fullname"
-                name="data[FullName]"
+                name="data[fullname]"
                 placeholder="সম্পূর্ন নাম"
                 required
               />
@@ -323,9 +325,7 @@
                 name="data[FamilyChildrenMember]"
                 placeholder="পরিবারের শিশু সদস্য"
               />
-              <div id="familychlildrenmembermsg" class="form-text">
-                
-              </div>
+              <div id="familychlildrenmembermsg" class="form-text"></div>
             </div>
             <div class="mb-3">
               <label for="illness" class="form-label fs-4"
@@ -432,7 +432,9 @@
 
       let form = document.getElementById("sheetdb-form");
 
-      window.addEventListener("contextmenu", (e) => {e.preventDefault()});
+      // window.addEventListener("contextmenu", (e) => {
+      //   e.preventDefault();
+      // });
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -441,8 +443,8 @@
             method: "POST",
             body: new FormData(document.getElementById("sheetdb-form")),
           })
-          .then((response) => response.json())
-          .then((html) => {
+            .then((response) => response.json())
+            .then((html) => {
               // msg.innerHTML = "তথ্য যুক্ত হচ্ছে অনুগ্রহ করে অপেক্ষা করুন...";
               // you can put any JS code here
               msg.innerHTML = "পরিবারের তথ্য সফল ভাবে যুক্ত হয়েছে 😍";
