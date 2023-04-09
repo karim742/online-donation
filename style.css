@@ -52,7 +52,7 @@ input,textarea,select {
   display: inline-block;
 }
 
-.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable,.onlinedonateNumber,.representativetitle{
+.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable,.onlinedonateNumber,.representativetitle,.gethelpTitle {
   background: #ffffff8c;
   padding: 2rem;
 }

@@ -62,13 +62,36 @@
 
   <section>
     <div class="container">
-      <h1 class="text-white"></h1>
-      <table id="show">
-        
-      </table>
+      <div class="gethelpTitle">
+        <h2 class="fw-bold"><span style="font-size: 4rem;">এ</span>খন আমাদের কাছ থেকে যারা সাহায্য পাবে তাদের তালিকা</h2>
+      </div>
+      <div class="gethelpTable" style="background: #ffffffed;">
+        <div class="table-responsive">          
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>নাম</th>
+                <th>মোবাইল নাম্বার</th>
+                <th>গ্রামের নাম</th>
+                <th>বাড়ীর নাম</th>
+                <th>কোড নাম্বার</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <!-- <tr>
+                <td>শাকিল</td>
+                <td><a href="tel:0150000000">০১৫০০০০০০০</a></td>
+                <td>মুগারচর</td>
+                <td>ভুইয়া বাড়ী</td>
+                <td>001</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
 
     <div>
-      <a class="btn btn-info fs-4" href="./helped_family_listing.html">সাহায্য প্রাপ্তদের তালিকাভুক্ত করুন</a>
+      <a class="btn btn-info fs-4 mt-3" href="./helped_family_listing.html">সাহায্য প্রাপ্তদের তালিকাভুক্ত করুন</a>
     </div>
     </div>
   </section>
@@ -76,24 +99,26 @@
 
 
   <script>
-    const show = document.getElementById('show');
-
+    const tableBody = document.getElementById('tableBody');
+  
     fetch('https://sheetdb.io/api/v1/odxza6403z7of')
             .then((response) => response.json())
             .then((data) => {
-              console.log(data[0]);
-              show.innerHTML = `<tr>
-          <td>${data[0].date}</td>
-          <td>${data[0].age}</td>
-          <td>${data[0].easeofclothing}</td>
-          <td>${data[0].fathername}</td>
-          <td>${data[0].fullname}</td>
-          <td>${data[0].mobilenumber}</td>
-          <td>${data[0].representativename}</td>
-        </tr>`;
+              // console.log(data[0]);
+              data.forEach((singleGH,index) => {
+                if(singleGH.helpstatus === "FALSE"){
+                  tableBody.innerHTML += `<tr>
+                    <td>${singleGH.fullname}</td>
+                    <td><a href="tel:0${singleGH.mobilenumber}">0${singleGH.mobilenumber}</a></td>
+                    <td>${singleGH.villagename}</td>
+                    <td>${singleGH.homename}</td>
+                    <td>00${index+1}</td>
+                  </tr>`;
+                }
+              });
             });
-
-  </script>
+  
+    </script>
 
 
   <script>
