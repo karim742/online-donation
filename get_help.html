@@ -70,10 +70,12 @@
           <table class="table table-bordered">
             <thead>
               <tr>
+                <th>নং</th>
                 <th>নাম</th>
                 <th>মোবাইল নাম্বার</th>
                 <th>গ্রামের নাম</th>
                 <th>বাড়ীর নাম</th>
+                <th>গুগুল লোকেশন</th>
                 <th>কোড নাম্বার</th>
               </tr>
             </thead>
@@ -104,15 +106,20 @@
     fetch('https://sheetdb.io/api/v1/odxza6403z7of')
             .then((response) => response.json())
             .then((data) => {
-              // console.log(data[0]);
+              // console.log(data[0].mobilenumber = '02');
               data.forEach((singleGH,index) => {
-                if(singleGH.helpstatus === "FALSE"){
+                let i = 0;
+                // console.log(singleGH.mobilenumber.slice(7));
+                // let codenum = singleGH.mobilenumber.slice(7);
+                if((singleGH.helpstatus === `NO${index}`)||(singleGH.helpstatus === `no${index}`)||((singleGH.helpstatus === ""))){
                   tableBody.innerHTML += `<tr>
+                    <td>${i++}</td>
                     <td>${singleGH.fullname}</td>
                     <td><a href="tel:0${singleGH.mobilenumber}">0${singleGH.mobilenumber}</a></td>
                     <td>${singleGH.villagename}</td>
                     <td>${singleGH.homename}</td>
-                    <td>00${index+1}</td>
+                    <td>${singleGH.googlelocation}</td>
+                    <td>${singleGH.helpstatus}</td>
                   </tr>`;
                 }
               });
@@ -123,7 +130,7 @@
 
   <script>
     const loader = document.querySelector('.loaderWrap');
-    const spin = document.querySelector('.loader>div');
+    const spin = document.querySelector('.loaderWrap>div');
     const body = document.querySelector('body');
 
     window.addEventListener('load',function(){

@@ -52,7 +52,7 @@ input,textarea,select {
   display: inline-block;
 }
 
-.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable,.onlinedonateNumber,.representativetitle,.gethelpTitle {
+.ourActivity,.ourAim,.donatetitle,.ourProtinidi,.ourProtinidiTable,.onlinedonateNumber,.representativetitle,.gethelpTitle,.hflistingTitle {
   background: #ffffff8c;
   padding: 2rem;
 }
@@ -67,8 +67,18 @@ input,textarea,select {
   top: 42px;
   left: 10px;
 }
+.hflistingTitle:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: red;
+  border-radius: 100%;
+  top: 42px;
+  left: 10px;
+}
 
-.representativetitle {
+.representativetitle,.hflistingTitle {
   position: relative;
   padding-left: 3rem;
 }
