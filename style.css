@@ -1,11 +1,12 @@
+
 @import url('https://fonts.maateen.me/bangla/font.css');
+
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: 'Bangla', sans-serif !important;
-
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<HTML lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -399,16 +399,40 @@
               <div id="protinidinamemsg" class="form-text"></div>
             </div>
             <div class="mb-3">
-              <label for="codenumber" class="form-label fs-4"
-                >২০। কোড নাম্বারঃ</label
+              <label for="codenumber" class="form-label fs-4">২০। সংকেতঃ</label
               >
-              <input
-                type="text"
-                class="form-control"
-                id="codenumber"
-                name="data[helpstatus]"
-                placeholder="কোড নাম্বার [Ex: no`phonenumber last 3 digit`]"
-              />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="HTML"
+                  name="data[poorstage]"
+                  value="HTML"
+                />
+                  <label class="form-check-label" for="HTML">লাল</label>
+                 
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="yellow"
+                  name="data[poorstage]"
+                  value="yellow"
+                />
+                  <label class="form-check-label" for="yellow">হলুদ</label>
+              </div>
+               
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="green"
+                  name="data[poorstage]"
+                  value="green"
+                />
+                  <label class="form-check-label" for="green">সবুজ</label>
+              </div>
               <div id="codenumbermsg" class="form-text"></div>
             </div>
             <div class="mb-3">
@@ -457,9 +481,7 @@
             body: new FormData(document.getElementById("sheetdb-form")),
           })
             .then((response) => response.json())
-            .then((html) => {
-              // msg.innerHTML = "তথ্য যুক্ত হচ্ছে অনুগ্রহ করে অপেক্ষা করুন...";
-              // you can put any JS code here
+            .then((data) => {
               msg.innerHTML = "পরিবারের তথ্য সফল ভাবে যুক্ত হয়েছে 😍";
 
               form.reset();
@@ -474,8 +496,42 @@
             passmsg.innerHTML = "";
           }, 5000);
         }
+
+        // auto code index
+
+        setTimeout(() => {
+          fetch("https://sheetdb.io/api/v1/odxza6403z7of")
+            .then((res) => res.json())
+            .then((data) => {
+              console.log(data.length);
+              let index = data.length - 1;
+              console.log(data[index].codenumber);
+
+              fetch(
+                `https://sheetdb.io/api/v1/odxza6403z7of/codenumber/${data[index].codenumber}`,
+                {
+                  method: "PATCH",
+                  headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    data: {
+                      helpstatus: `no${index}`,
+                    },
+                  }),
+                }
+              )
+                .then((response) => response.json())
+                .then((data) => {
+                  // console.log(data)
+                });
+            });
+        }, 5000);
       });
     </script>
+
+    <script></script>
 
     <script>
       const loader = document.querySelector(".loaderWrap");
@@ -489,4 +545,4 @@
       });
     </script>
   </body>
-</html>
+</HTML>
